@@ -1,4 +1,4 @@
-<html>
+
 <?php
 
 $course1 = [
@@ -18,6 +18,11 @@ $course2 = [
     'NURSE'
 ];
 
- $result = array_diff($course1, $course2); 
-
+$result = array_diff($course1, $course2); 
 ?>
+
+<html>
+    <h1> <?php
+    print_r($result);
+     ?></h1>
+</html>
