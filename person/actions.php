@@ -8,10 +8,10 @@ if (isset ($_POST['submit_person'])){
     $birthday = $_POST ['birthday'];
     $gender = $_POST ['gender'];
 
-$sql = "INSERT INTO persons (name, place_of_birth, birthday, gender) VALUES
-('$name', '$place_of_birth', '$birthday', '$gender')";
+    $sql = "INSERT INTO persons (name, place_of_birth, birthday, gender) VALUES
+    ('$name', '$place_of_birth', '$birthday', '$gender')";
 
-mysqli_query($conn, $sql);
+    $query = $conn->query($sql) or die($conn->error);
 
     $_SESSION['sucess'] = "Person sucessfully added";
     header("Location: ../person.php");
