@@ -1,10 +1,9 @@
 <?php include ('header.php')?>
 <div class="container">
-    <a class="btn btn-primary" href="person/add.php">Add person</a>
 <?php 
     $query = $conn->query("SELECT * FROM persons");
 ?>
-    <table class="table">
+    <table class="table table-bordered table-dark">
     <thead>
         <tr>
         <th scope="col">ID</th>
@@ -29,5 +28,6 @@
      $conn->close();
     ?>
     </table>
+    <a class="btn btn-outline-primary" href="person/add.php">Add person</a>
 </div>
 <?php include ('footer.php')?>
