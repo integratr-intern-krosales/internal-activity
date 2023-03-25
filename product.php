@@ -15,12 +15,17 @@
     </thead>
     <?php
      while ($product = $query->fetch_assoc()){
+        $id= $product['id'];
         echo "<tr> 
             <td>" .$product['id'] . "</td>
             <td>" .$product['name'] . "</td>
             <td>" .$product['price'] . "</td>
             <td>" .$product['quantity'] . "</td>
-            <td></td>
+            <td> <a href ='product/updateprod.php?id=$id' class='btn
+            btn-outline-primary'> Update </a>&nbsp;
+            <a href ='product/deleteprod.php?id=$id' class='btn
+            btn-outline-danger' onclick='return confirm (\"Are you want to delete this record?\")'>
+             Delete </a></td>
         </tr>";
      }
      $conn->close();

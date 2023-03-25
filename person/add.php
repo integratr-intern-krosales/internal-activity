@@ -13,7 +13,7 @@
         <div class="mb-3"><label for="place_of_birth" class="form-label">Birthday</label>
             <input type="date" class="form-control" id="place_of_birth" name="birthday">
         </div>
-        <input type="submit" name="submit_person" value="Store Person" class="btn btn-outline-primary">
+        <input type="submit" name="submit_person" value="Store Person" class="btn btn-primary">
     </form>
 </div>
 <?php include('../footer.php') ?>
